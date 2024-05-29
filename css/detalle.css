@@ -1,0 +1,34 @@
+.peliculadetalle {
+    display: flex; /* Activamos el modelo de caja flexible */
+}
+
+.colum {
+    flex: 1; /* Las columnas se expandirán para llenar el espacio disponible */
+    padding: 10px;
+}
+
+.colum img {
+    max-width: 100%; /* Limita el ancho de la imagen al 100% del contenedor */
+    max-height: 400px; /* Limita la altura máxima de la imagen */
+    margin: auto;
+    display: block;
+}
+
+.trailer {
+    text-align: center; /* Centra el contenido dentro del contenedor */
+    margin: 20px 0; /* Aplica un margen de 20px arriba y abajo */
+}
+
+.trailer iframe {
+    width: 560px; /* Asegura que el iframe no exceda el ancho del contenedor */
+    height: 315px; /* Mantiene la proporción del iframe */
+}
+
+
+
+
+.imgmovie {
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CACSeries</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/restyle.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="camera-logo" viewBox="0 0 16 16">
+                <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/>
+              </svg>
+            
+        </div>
+        <h1 href="../index.html" >CAC Movies</h1>
+            <label class="labe_hamburguesa" for="menu_hamburguesa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list-icon" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>    
+        </label>
+        <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+        <ul class="ul_links">
+
+            <li class="li_links"> <a class="ten-link" href="#">Tendencias</a></li>
+            <li class="li_links"> <a class="link" href="../index.html">Inicio</a></li>
+            <li class="li_links"> <a class="link" href="../pages/registrarse.html">Registrarse</a></li>
+            <li class="li_links"> <a class="link" href="../pages/iniciosesion.html">Iniciar Sesion</a></li>
+            
+        </ul>
+        </nav>
+    </header>
+    <main>
+                <div>
+                    <form id="loginForm" action="">
+                        <h1>Iniciar Sesion</h1>
+                        <div>
+                            <!-- <label for="email" class="ingreso">Correo Electrónico:</label> -->
+                            <input type="email" class="ingreso" id="email" name="email" placeholder="Correo Electrónico">
+                            <div id="emailError" class="error-message"></div>
+                        </div>
+                        <div>
+                            <!-- <label for="password" class="ingreso">Contraseña:</label> -->
+                            <input type="password" class="ingreso" id="password" name="password" placeholder="Inicio Sesion">
+                            <div id="passwordError" class="error-message"></div>
+                        </div>
+                        <input type="submit" class="boton">
+                    </form>
+                </div>
+        <script src="../js/login.js"></script>
+    </main>
+    <footer>
+        <li>Terminos y Condiciones<a href=""></a></li>
+        <li>Preguntas Frecuentes<a href=""></a></li>
+        <li>Ayuda<a href=""></a></li>
+        <li>Administrador Peliculas<a href=""></a></li>
+    </footer>
+</body>
+
+</html>

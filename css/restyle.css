@@ -1,0 +1,58 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right,#070f1b , #142338) ;
+    font-family: 'calibri';
+    color: #ffffff;
+}
+
+main {
+    margin-top: 20px;
+    text-align: center;
+    flex: 1; /* Permite que el contenedor principal tome todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    text-align: center;
+    padding: 20px 25px;
+    box-shadow: 0 5px 10px #070f1b;
+}
+
+
+form h1 {
+    color: #070f1b;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 30px;
+
+}
+
+form .ingreso{
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+    color: #1d1d1d;
+    border-bottom: solid 1px #070f1b;
+    padding: 0 5px;
+    font-size:  18px;
+}
+
+form .boton {
+    color: #fff;
+    border: none;
+    background: linear-gradient(to right,#070f1b , #142338) ;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 25px;
+}
+

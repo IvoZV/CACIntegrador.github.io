@@ -1,0 +1,335 @@
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+font-family: "Open Sans", sans-serif;
+
+}
+:root {
+    --color_primario: #3066BE;
+    --color_primario_suave: #b23fffe1;
+    --color_blanco: #fff;
+    --altura_header: 80px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body{
+
+    background: #070f1b;
+    font-family: 'calibri';
+    color: #ffffff;
+    
+
+}
+
+header {
+    
+    position: relative;
+    height: var(--altura_header);
+    background: #101f27;
+    z-index: 10;
+
+}
+
+
+
+/*Navbar*/
+.navbar {
+    
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 var(--padding_left_right);
+    box-shadow: 0 2vh 10px  rgba(0, 0, 0, 0.212);
+    
+}
+
+
+.menu_hamburguesa{
+    display: none;
+}
+
+.menu_hamburguesa:checked + .ul_links{
+    height: calc(100vh - var(--altura_header));
+}
+.logo {
+    color:var(--color_blanco)
+}
+
+.list-icon {
+    color: var(--color_blanco);
+    cursor: pointer;
+}
+.ul_links {
+    width: 100%;
+    background-color: #101f27;
+    position: absolute;
+    top: var(--altura_header);
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transition: all .3s;
+}
+
+
+
+.ten-link{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+}
+.ten-link:hover{
+    
+    background-color: #0056b3;
+    
+    
+}
+.link{
+    display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+}
+.link:hover{
+    
+    background-color: #0056b3;
+    
+    
+}
+
+
+@media (min-width:768px){
+    .labe_hamburguesa{
+        display: none;
+    }
+    
+    .ul_links{
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .ten-link{
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: transparent;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+    }
+    .ten-link:hover{
+        
+        background-color: #0056b3;
+        
+        
+    }
+    .link{
+        display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+    }
+    .link:hover{
+        
+        background-color: #0056b3;
+        
+        
+    }
+    
+    
+}
+/*Navbar*/
+
+
+h2{
+    margin-top: 30px;
+ text-align: center;
+}
+
+.logo{
+    float:left;
+    padding: 0px 18px 0;
+}
+
+.logo :hover{
+    transition: .3s;
+    transform: scale(1.1);
+    
+}
+
+.logo img{
+    height: 80px;
+}
+
+.logo img:hover{
+    transition: .3s;
+    transform: scale(1.1);
+    
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 4 columnas por defecto */
+    gap: 10px; /* Espacio entre las tarjetas */
+    padding: 10px;
+}
+
+
+.moviecard {
+    position: relative;
+    width: 136px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+
+}
+
+
+.imgmovie {
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+}
+
+.moviecard h3 {
+    border-radius: 11px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(13, 37, 70, 0.945); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.moviecard:hover h3 {
+    opacity: 1; 
+}
+
+/* Consultas de medios para hacer la cuadrícula responsiva */
+@media (max-width: 1200px) {
+    .movie-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* 3 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 900px) {
+    .movie-container {
+        grid-template-columns: 1fr 1fr 1fr ; /* 2 columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 600px) {
+    .movie-container {
+        grid-template-columns: 1fr 1fr 1fr; /* 1 columna en pantallas muy pequeñas */
+        justify-content: center; /* Centrar el contenido horizontalmente */
+    }
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos dentro del footer */
+    align-items: center; /* Centra verticalmente los elementos dentro del footer si tiene altura */
+    padding: 20px; /* Añadir algo de relleno alrededor del footer */
+    background-color: #181818; /* Color de fondo del footer, ajusta según tus necesidades */
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none; /* Añadido para asegurar que no haya subrayado por defecto */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+
+
+footer li{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+footer li:hover{
+    transition: .3s;
+    background-color: #0056b3;
+
+}
+article a img:hover{
+    transition: .3s;
+    transform: scale(1.1);
+}
+
+.error-message {
+    color: red;
+}
+
+
